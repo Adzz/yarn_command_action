@@ -19,5 +19,5 @@ else
     fi
 fi
 
-echo "## Running Jest Tests"
-sh -c "$setup $2 test $1"
+echo "## Running $1 $2 now"
+sh -c "$setup $1 $2"

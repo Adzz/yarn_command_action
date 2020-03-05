@@ -1,21 +1,21 @@
-name: Run Jest Tests with yarn
-description: Run yarn test command for javascript projects
+name: Run yarn or npm command
+description: Runs any yarn or npm command e.g. yarn test.
 author: adzz
 inputs:
-  params:
-    description: Supply command arguments
-    required: false
-    default: ""
   package-manager:
     description: Specify whether to use npm or yarn to run the tests. May be npm or yarn only defaults to yarn
     required: false
     default: yarn
+  command:
+    description: The command you wish to run e.g. test
+    required: false
+    default: ""
 runs:
   using: "docker"
   image: "Dockerfile"
   args:
-    - ${{ inputs.params }}
     - ${{ inputs.package-manager }}
+    - ${{ inputs.command }}
 branding:
   icon: circle
   color: purple
