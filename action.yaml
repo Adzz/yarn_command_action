@@ -1,4 +1,4 @@
-name: Run yarn or npm command
+name: Run a yarn or npm command
 description: Runs any yarn or npm command e.g. yarn test.
 author: adzz
 inputs:

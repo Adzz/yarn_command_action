@@ -1,6 +1,8 @@
-# Yarn Command Github Action
+# Javascript Command Github Action
 
 This is a simple action to allow you to run any command defined in your package.json e.g. `yarn test` or `npm test`. This command will install packages if that has not been done first, then run the supplied command.
+
+Currently uses node:12.16.1-alpine3.9 docker container.
 
 # Examples
 
@@ -17,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: Adzz/jest_test_action@v0.0.2-alpha
+      - uses: Adzz/jest_test_action@v1.0.0
         with:
           command: test --watchAll=false
 ```
@@ -42,7 +44,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: Adzz/jest_test_action@v0.0.2-alpha
+      - uses: Adzz/jest_test_action@v1.0.0
         with:
           command: test:ci
 ```
@@ -58,7 +60,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: Adzz/jest_test_action@v0.0.2-alpha
+      - uses: Adzz/jest_test_action@v1.0.0
         with:
           package-manager: npm
           command: test:ci
@@ -85,7 +87,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: Adzz/jest_test_action@v0.0.2-alpha
+      - uses: Adzz/jest_test_action@v1.0.0
         with:
           command: eslint
   tests:
@@ -93,7 +95,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: Adzz/jest_test_action@v0.0.2-alpha
+      - uses: Adzz/jest_test_action@v1.0.0
         with:
           command: test:ci
 ```
