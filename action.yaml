@@ -8,8 +8,7 @@ inputs:
     default: yarn
   command:
     description: The command you wish to run e.g. test
-    required: false
-    default: ""
+    required: true
 runs:
   using: "docker"
   image: "Dockerfile"
