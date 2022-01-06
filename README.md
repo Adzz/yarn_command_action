@@ -2,7 +2,7 @@
 
 This is a simple action to allow you to run any command defined in your package.json e.g. `yarn test` or `npm test`. This command will install packages if that has not been done first, then run the supplied command.
 
-Currently uses node:12.16.1-alpine3.9 docker container.
+Currently uses node:16.13.1-alpine3.15 docker container.
 
 # Examples
 
